@@ -13,11 +13,15 @@ namespace IShop.Client
         public FormLogin()
         {
             InitializeComponent();
+
+            //this.PassField.AutoSize = false;
+            //this.PassField.Size = new Size(this.PassField.Size.Width, 64);
         }
 
         private void BtnRegistration_Click(object sender, EventArgs e)
         {
             new FormRegistration().ShowDialog();
         }
+                
     }
 }

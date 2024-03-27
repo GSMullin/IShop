@@ -16,5 +16,11 @@ namespace IShop.Client
         {
             InitializeComponent();
         }
+
+        private void BtnCloseFormRegistration_Click(object sender, EventArgs e)
+        {
+            BtnCloseFormRegistration.ForeColor = Color.Blue;
+            this.Close();
+        }
     }
 }
