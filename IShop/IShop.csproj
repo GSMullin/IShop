@@ -6,9 +6,4 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="App\" />
-    <Folder Include="Storag\" />
-  </ItemGroup>
-
 </Project>

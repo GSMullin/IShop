@@ -39,47 +39,53 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(338, 81);
+            label1.Location = new System.Drawing.Point(386, 108);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(102, 15);
+            label1.Size = new System.Drawing.Size(129, 20);
             label1.TabIndex = 0;
             label1.Text = "Создайте аккаунт";
             // 
             // RegistryLoginField
             // 
-            RegistryLoginField.Location = new System.Drawing.Point(295, 115);
+            RegistryLoginField.Location = new System.Drawing.Point(337, 153);
+            RegistryLoginField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RegistryLoginField.Name = "RegistryLoginField";
-            RegistryLoginField.Size = new System.Drawing.Size(197, 23);
+            RegistryLoginField.Size = new System.Drawing.Size(225, 27);
             RegistryLoginField.TabIndex = 1;
             // 
             // RegistryPassField
             // 
-            RegistryPassField.Location = new System.Drawing.Point(295, 157);
+            RegistryPassField.Location = new System.Drawing.Point(337, 209);
+            RegistryPassField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RegistryPassField.Name = "RegistryPassField";
-            RegistryPassField.Size = new System.Drawing.Size(197, 23);
+            RegistryPassField.Size = new System.Drawing.Size(225, 27);
             RegistryPassField.TabIndex = 2;
             // 
             // BtnCreateAccaount
             // 
-            BtnCreateAccaount.Location = new System.Drawing.Point(355, 228);
+            BtnCreateAccaount.Location = new System.Drawing.Point(406, 304);
+            BtnCreateAccaount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             BtnCreateAccaount.Name = "BtnCreateAccaount";
-            BtnCreateAccaount.Size = new System.Drawing.Size(75, 23);
+            BtnCreateAccaount.Size = new System.Drawing.Size(86, 31);
             BtnCreateAccaount.TabIndex = 3;
             BtnCreateAccaount.Text = "Создать аккаунт";
             BtnCreateAccaount.UseVisualStyleBackColor = true;
+            BtnCreateAccaount.Click += BtnCreateAccaount_Click;
             // 
             // RegistryNumberField
             // 
-            RegistryNumberField.Location = new System.Drawing.Point(295, 199);
+            RegistryNumberField.Location = new System.Drawing.Point(337, 265);
+            RegistryNumberField.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             RegistryNumberField.Name = "RegistryNumberField";
-            RegistryNumberField.Size = new System.Drawing.Size(197, 23);
+            RegistryNumberField.Size = new System.Drawing.Size(225, 27);
             RegistryNumberField.TabIndex = 4;
             // 
             // BtnCloseFormRegistration
             // 
-            BtnCloseFormRegistration.Location = new System.Drawing.Point(713, 12);
+            BtnCloseFormRegistration.Location = new System.Drawing.Point(815, 16);
+            BtnCloseFormRegistration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             BtnCloseFormRegistration.Name = "BtnCloseFormRegistration";
-            BtnCloseFormRegistration.Size = new System.Drawing.Size(75, 23);
+            BtnCloseFormRegistration.Size = new System.Drawing.Size(86, 31);
             BtnCloseFormRegistration.TabIndex = 5;
             BtnCloseFormRegistration.Text = "Закрыть";
             BtnCloseFormRegistration.UseVisualStyleBackColor = true;
@@ -87,16 +93,16 @@
             // 
             // FormRegistration
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(800, 450);
+            ClientSize = new System.Drawing.Size(914, 600);
             Controls.Add(BtnCloseFormRegistration);
             Controls.Add(RegistryNumberField);
             Controls.Add(BtnCreateAccaount);
             Controls.Add(RegistryPassField);
             Controls.Add(RegistryLoginField);
             Controls.Add(label1);
-            FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             Name = "FormRegistration";
             Text = "Form1";
             ResumeLayout(false);
