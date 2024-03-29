@@ -17,13 +17,18 @@ namespace IShop.App.UserRegistration
         private IUserStorage _storage;
 
 
-        public void Registration(UserRegistrationInput dataInput)
+        public RegistrationResult Registration(UserRegistrationInput dataInput)
         {
+            RegistrationResult result = new RegistrationResult();
+
             bool isCorrectLoginLenght = dataInput.Login.Length > 3 & dataInput.Login.Length < 8;
             if (isCorrectLoginLenght==false)
             {
-                throw new Exception("Неверное кол-во символов");
+                result.RegistrationError("Неверное кол-во символов");
             }
+
+            result.RegistrationSucces();
+            return result;
         }
 
         public void Save()

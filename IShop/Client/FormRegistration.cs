@@ -21,17 +21,47 @@ namespace IShop.Client
 
         private void BtnCloseFormRegistration_Click(object sender, EventArgs e)
         {
-            //BtnCloseFormRegistration.ForeColor = Color.Blue;
             this.Close();
         }
 
         private void BtnCreateAccaount_Click(object sender, EventArgs e)
-        {
+        { 
             IUserStorage storage = new UserStorage(); //Объявили хранилище данных
             UserEntity userEntity = new UserEntity(storage); //Объявили саму бизнес-логику пользователя
             UserRegistrationInput input = new UserRegistrationInput(); //Объявили параметры для регистрации
-            userEntity.Registration(input); //Вызов у бизнес логики метод регистрации
+            input.Login = this.RegistryLoginField.Text;
+            input.Password = this.RegistryPassField.Text;
+            /*try
+            {
+                userEntity.Registration(input); //Вызов у бизнес логики метод регистрации
+                userEntity.Save(); //Вызов у бизнес логики метод сохранения
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(
+                ex.Message,
+                "Ошибка",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error,
+                MessageBoxDefaultButton.Button1,
+                MessageBoxOptions.DefaultDesktopOnly);
+            }*/
+            RegistrationResult result = userEntity.Registration(input);
+            if (result.IsSucces == false)
+            {
+                MessageBox.Show(
+               result.Message,
+               "Ошибка",
+               MessageBoxButtons.OK,
+               MessageBoxIcon.Error,
+               MessageBoxDefaultButton.Button1,
+               MessageBoxOptions.DefaultDesktopOnly);
+                return;
+            }
             userEntity.Save(); //Вызов у бизнес логики метод сохранения
+            Close();
         }
+
     }
 }
