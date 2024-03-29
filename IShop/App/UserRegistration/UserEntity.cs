@@ -16,18 +16,29 @@ namespace IShop.App.UserRegistration
 
         private IUserStorage _storage;
 
+        //Пользователю понятно в каком поле проблема?
+        //Как избавится от раздувания if(но не от кол-ва проверок)?
+        //В пароле должен быть спец символ?
+        //Как показать пользователю сразу все ошибки?
 
         public RegistrationResult Registration(UserRegistrationInput dataInput)
         {
+            
             RegistrationResult result = new RegistrationResult();
+            result.RegistrationSucces();
 
             bool isCorrectLoginLenght = dataInput.Login.Length > 3 & dataInput.Login.Length < 8;
             if (isCorrectLoginLenght==false)
             {
-                result.RegistrationError("Неверное кол-во символов");
+                result.RegistrationError("Логин Неверное кол-во символов");
             }
 
-            result.RegistrationSucces();
+            bool isCorrectPasswordLenght = dataInput.Password.Length > 5 & dataInput.Password.Length < 10;
+            if (isCorrectPasswordLenght == false)
+            {
+                result.RegistrationError("Пароль Неверное кол-во символов");
+            }
+
             return result;
         }
 

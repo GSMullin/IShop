@@ -14,12 +14,13 @@ namespace IShop.App.UserRegistration
         public void RegistrationSucces () 
         {
             IsSucces = true;
+            Message = null;
         }
 
         public void RegistrationError(string messageError) 
         {
             IsSucces = false;
-            Message = messageError;
+            Message = Message + messageError;
         }
     }
 }
